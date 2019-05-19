@@ -67,8 +67,10 @@ class Array
     my_array
   end
 
-  #def my_rotate
-  #end
+  def my_rotate(num = 1)
+    num.times { self.push(self.shift) } 
+    self
+  end
 
   def my_join(str)
     my_string = ''
@@ -87,7 +89,6 @@ class Array
   end
 end
 
-p [1].my_reverse
-
-
-
+a = %w[a b c d]
+p a
+p a.my_rotate(2)
